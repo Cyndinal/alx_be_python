@@ -16,6 +16,6 @@ def multiplication(number1,number2):
 
 
 
-addition(5,10)
-multiplication(5,10)
-subtraction(5,10)
+addition(10,5)
+multiplication(10,5)
+subtraction(10,5)
