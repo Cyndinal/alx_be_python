@@ -1,20 +1,20 @@
 from babel.messages.checkers import checkers
 
-task = input("Task description: ")
-priority = input("Task priority: low/medium/high ").lower()
-time_bound = input("Task time bound: yes/no ").lower()
+Task = input("Task description: ")
+Priority = input("Task priority: low/medium/high ").lower()
+Time_bound = input("Task time bound: yes/no ").lower()
 
 task_template = {
-    "task": task,
-    "priority":priority,
-    "time_bound":time_bound
+    "task": Task,
+    "priority":Priority,
+    "time_bound":Time_bound
 }
 
-match priority:
+match Priority:
     case "high":
-        if priority == "high" and time_bound == "yes":
-            print(f"Reminder: {task} is a high priority task that requires immediate attention today!")
+        if Priority == "high" and Time_bound == "yes":
+            print(f"Reminder: {Task} is a high priority task that requires immediate attention today!")
 
     case "low":
-        if priority == "low" and time_bound == "yes":
-            print(f"{task_template.get(task)} is a low priority task. Consider completing it when you have free time")
+        if Priority == "low" and Time_bound == "yes":
+            print(f"{task_template.get(Task)} is a low priority task. Consider completing it when you have free time")
