@@ -1,8 +1,17 @@
-from babel.messages.checkers import checkers
 
-Task = input("Task description: ")
-Priority = input("Task priority: low/medium/high ").lower()
-Time_Bound = input("Task time bound: yes/no ").lower()
+
+"""
+put\s*\(\s*['\"]Enter your task:\s*['\"]\s*\) / /
+tmp/correction/2725873861510670660907599552428446824838_5/100740/988866/control-flow
+/daily_reminder.py doesn't contain input\s*\(\s*['\"]Is it time-bound\?\s*\(yes\/no\):\s*['\"]\s*\) /
+/tmp/correction/2725873861510670660907599552428446824838_5/100740/988866/control-flow/daily_reminder.py doesn't
+contain input\s*\(\s*['\"]Priority\s*\(high\/medium\/low\):\s*['\"]\s*\)
+
+"""
+
+Task = input("Enter your task: ")
+Priority = input("Priority:high/medium/low ").lower()
+Time_Bound = input("Is it time-bound?(yes or no) ").lower()
 
 task_template = {
     "task": Task,
