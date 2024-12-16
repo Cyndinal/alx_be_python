@@ -6,14 +6,14 @@ operation = input("Choose the operation (+, -, *, /):")
 
 match operation:
     case "+":
-        print(f"{first} + {second} = {first + second}")
+        print(f"The result is {first + second}")
     case "-":
-        print(f"{first} - {second} = {first - second}")
+        print(f"The result is {first - second}")
     case "*":
-        print(f"{first} * {second} = {first * second}")
+        print(f"The result is {first * second}")
     case "/":
         try:
-            print(f"{first} / {second} = {first / second}")
+            print(f"The result is {first / second}")
         except ZeroDivisionError:
             print("Cannot divide by zero")
 
