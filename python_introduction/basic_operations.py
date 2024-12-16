@@ -1,7 +1,5 @@
-
 number1 = 10
 number2 = 5
-
 
 summer = number1 + number2
 mul = number1 * number2
