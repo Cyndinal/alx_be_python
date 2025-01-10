@@ -1,3 +1,5 @@
+from numpy.f2py.auxfuncs import throw_error
+
 
 def perform_operation(num1,num2,operation):
     # num1 =float(input("Numb1"))
@@ -14,8 +16,12 @@ def perform_operation(num1,num2,operation):
             result = num1*num2
             return result
         case "divide":
-            result = num1/num2
-            return result
+            try:
+                result = num1/num2
+                return result
+            except ZeroDivisionError:
+                if num2 == 0:
+                    throw_error(f"{num2} cannot be zero, Review!")
         case _:
             print("Invalid operation")
 
