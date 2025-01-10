@@ -15,6 +15,7 @@ match priority:
     case _:
         reminder = f"'{task}' has an unknown priority level"
 
+
 # Modify the reminder if the task is time-bound
 if time_bound == "yes":
     reminder += " that requires immediate attention today!"
