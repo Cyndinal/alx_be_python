@@ -17,11 +17,11 @@ def shopping_list_menu():
     shopping_list=[]
     while True:
         display_menu()
-        options= int(input("\nEnter the item to add:\n"))
+        options= int(input("\nEnter your choice:\n"))
 
         match options:
             case 1:
-                add_item = input("Enter name of item: ")
+                add_item = input("Enter the item to add: ")
                 shopping_list.append(add_item)
             case 2:
                 remove_item = input("Enter name of item to remove: ")
