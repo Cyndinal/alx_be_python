@@ -10,7 +10,7 @@ def convert_to_fahrenheit(celsius):
 
 
 
-prompt = int(input("Enter the temperature in Fahrenheit or Celsius: "))
+prompt = int(input("Enter the temperature to convert:"))
 celsius_or_fahrenheit = input("Is this temperature in Celsius or Fahrenheit? (C/F):").strip().upper()
 
 match celsius_or_fahrenheit:
