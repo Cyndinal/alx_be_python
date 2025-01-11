@@ -19,5 +19,5 @@ match celsius_or_fahrenheit:
     case "F":
         convert_to_celsius(prompt)
     case _:
-        print("Invalid input, Enter C or F ")
+        print("Invalid temperature. Please enter a numeric value. ")
 
