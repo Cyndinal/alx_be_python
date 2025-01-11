@@ -1,56 +1,40 @@
-# shopping_list_manager.py
+# Question
+# Utilize Python lists to create a simple
+# shopping list manager that allows users to add items,
+# view the current list, and remove items.
 
+# user interface
 def display_menu():
-    print("\nShopping List Manager")
-    print("1. View shopping list")
-    print("2. Add item to shopping list")
-    print("3. Remove item from shopping list")
+    print("1. Add item")
+    print("2. Remove item")
+    print("3. View all items")
     print("4. Exit")
 
-def view_shopping_list(shopping_list):
-    if not shopping_list:
-        print("\nYour shopping list is empty.")
-    else:
-        print("\nYour shopping list:")
-        for index, item in enumerate(shopping_list, start=1):
-            print(f"{index}. {item}")
 
-def add_item(shopping_list):
-    item = input("\nEnter the item to add: ")
-    shopping_list.append(item)
-    print(f"{item} has been added to your shopping list.")
-
-def remove_item(shopping_list):
-    view_shopping_list(shopping_list)
-    if shopping_list:
-        try:
-            item_index = int(input("\nEnter the number of the item to remove: "))
-            if 1 <= item_index <= len(shopping_list):
-                removed_item = shopping_list.pop(item_index - 1)
-                print(f"{removed_item} has been removed from your shopping list.")
-            else:
-                print("Invalid item number.")
-        except ValueError:
-            print("Please enter a valid number.")
-
-def main():
-    shopping_list = []
-
+def shopping_list_menu(shopping_list):
+    # global add_item
     while True:
         display_menu()
-        choice = input("\nEnter your choice: ")
+        options= int(input("\nEnter your choice:\n"))
 
-        if choice == '1':
-            view_shopping_list(shopping_list)
-        elif choice == '2':
-            add_item(shopping_list)
-        elif choice == '3':
-            remove_item(shopping_list)
-        elif choice == '4':
-            print("Exiting Shopping List Manager. Goodbye!")
-            break
-        else:
-            print("Invalid choice. Please try again.")
+        match options:
+            case 1:
+                add_item = input("Enter name of item: ")
+                shopping_list.append(add_item)
+            case 2:
+                remove_item = input("Enter name of item to remove: ")
+                if not remove_item in shopping_list:
+                    print(f"{remove_item} Item not found!!")
+                else:
+                    print(f"{remove_item} Item removed!!")
+                    shopping_list.remove(remove_item)
+            case 3:
+                for item,index in enumerate(shopping_list,start=1):
+                    print(f"{item}-->{index}")
+            case 4:
+                exit(0)
+            case _:
+                print("\nInvalid choice!!\nTry again!!\n")
 
-if __name__ == "__main__":
-    main()
+
+shopping_list_menu([])
