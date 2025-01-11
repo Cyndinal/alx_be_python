@@ -12,8 +12,9 @@ def display_menu():
     print("4. Exit")
 
 
-def shopping_list_menu(shopping_list):
+def shopping_list_menu():
     # global add_item
+    shopping_list=[]
     while True:
         display_menu()
         options= int(input("\nEnter your choice:\n"))
@@ -38,4 +39,4 @@ def shopping_list_menu(shopping_list):
                 print("\nInvalid choice!!\nTry again!!\n")
 
 
-shopping_list_menu([])
+shopping_list_menu()
