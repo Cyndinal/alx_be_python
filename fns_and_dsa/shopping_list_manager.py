@@ -17,7 +17,7 @@ def shopping_list_menu():
     shopping_list=[]
     while True:
         display_menu()
-        options= int(input("\nEnter your choice:\n"))
+        options= int(input("\nEnter the item to add:\n"))
 
         match options:
             case 1:
