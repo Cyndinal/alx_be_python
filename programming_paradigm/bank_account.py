@@ -9,7 +9,6 @@ class BankAccount:
     def withdraw(self,amount):
         if 0 < amount <= self.account_balance:
             self.account_balance -= amount
-            return True
         return "Insufficient funds."
 
 
