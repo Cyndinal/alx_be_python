@@ -7,8 +7,11 @@ class BankAccount:
         self.account_balance +=amount
 
     def withdraw(self,amount):
-        self.account_balance -= amount
-        return f'Withdrew: ${amount}'
+        if amount < self.account_balance:
+            return "Insufficient funds"
+        else:
+            self.account_balance -= amount
+            return f'Withdrew: ${amount}'
 
 
     def display_balance(self):
