@@ -9,3 +9,4 @@ class BankAccount:
         self.account_balance -= amount
     def display_balance(self):
         self.account_balance = float(self.account_balance)
+        print(f"The account balance is {self.account_balance}")
