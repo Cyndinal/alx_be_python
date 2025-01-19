@@ -10,7 +10,7 @@ def safe_divide(numerator, denominator):
         result =numerator / denominator
         return f"{result} Success!"
     except ZeroDivisionError:
-        return "Error:Cannot divide by zero."
+        print("Error:Cannot divide by zero.")
     except ValueError:
         float(numerator)/float(denominator)
         return "Input must be a number."
