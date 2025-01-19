@@ -10,7 +10,7 @@ class BankAccount:
         if 0 < amount <= self.account_balance:
             self.account_balance -= amount
             return True
-        return False
+        return "Insufficient balance"
 
 
 
