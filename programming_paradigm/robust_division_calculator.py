@@ -12,4 +12,5 @@ def safe_divide(numerator, denominator):
     except ZeroDivisionError:
         return 0
     except ValueError:
+        float(numerator)/float(denominator)
         return "Input must be a number."
