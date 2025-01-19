@@ -8,8 +8,9 @@ class BankAccount:
 
     def withdraw(self,amount):
         self.account_balance -= amount
-        print(f'Withdrew: ${amount}')
+        return f'Withdrew: ${amount}'
+
 
     def display_balance(self):
         self.account_balance = float(self.account_balance)
-        print(f"Current Balance: ${self.account_balance}")
+        return f"Current Balance: ${self.account_balance}"
