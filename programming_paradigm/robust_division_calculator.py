@@ -6,12 +6,14 @@
 
 
 def safe_divide(numerator, denominator):
+    numerator = float(numerator)
+    denominator = float(denominator)
     try:
         result =numerator / denominator
         return f"{result} Success!"
     except ZeroDivisionError:
         return "Error: Cannot divide by zero"
     except ValueError:
-        float(numerator)/float(denominator)
-        return "Input must be a number."
+        # return "Input must be a number."
+        return "Error: Non-numeric input provided. Please enter valid numbers."
 
