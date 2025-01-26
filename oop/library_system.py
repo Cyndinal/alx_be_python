@@ -5,7 +5,7 @@ class Book:
         self.author = author
 
     def __str__(self):
-        return f"{self.title} by {self.author}"
+        return f"Book:{self.title} by {self.author}"
 
 class EBook(Book):
     def __init__(self, title, author, file_size):
@@ -13,7 +13,7 @@ class EBook(Book):
         self.file_size = file_size
 
     def __str__(self):
-        return f"{self.title} by {self.author}, File Size: {self.file_size}KB"
+        return f"Ebook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
@@ -21,7 +21,7 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-        return f"{self.title} by {self.author}, Page Count: {self.page_count}"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 class Library:
     def __init__(self):
@@ -42,8 +42,8 @@ if __name__ == "__main__":
     ebook1 = EBook("Snow Crash", "Neal Stephenson", 500)
     printbook1 = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
 
-    library.add_book(f"Book:{book1}")
-    library.add_book(f"Ebook:{ebook1}")
-    library.add_book(f"PrintBook:{printbook1}")
+    library.add_book(book1)
+    library.add_book(ebook1)
+    library.add_book(printbook1)
 
     library.list_books()
