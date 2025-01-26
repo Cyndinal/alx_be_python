@@ -42,8 +42,8 @@ if __name__ == "__main__":
     ebook1 = EBook("Snow Crash", "Neal Stephenson", 500)
     printbook1 = PrintBook("The Catcher in the Rye", "J.D. Salinger", 234)
 
-    library.add_book(f"Book: {book1}")
-    library.add_book(f"Ebook: {ebook1}")
-    library.add_book(f"Printbook:{printbook1}")
+    library.add_book(f"Book:{book1}")
+    library.add_book(f"Ebook:{ebook1}")
+    library.add_book(f"PrintBook:{printbook1}")
 
     library.list_books()
