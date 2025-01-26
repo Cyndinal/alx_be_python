@@ -8,7 +8,7 @@ class Calculator:
 
     @classmethod
     def multiply(cls, a, b):
-        print(cls.calculation_type)
+        print("Calculation type:",cls.calculation_type)
         return a * b
 
 # Example usage
@@ -20,3 +20,5 @@ if __name__ == "__main__":
     # Using the class method
     product_result = Calculator.multiply(5, 3)
     print(f"The product is: {product_result}")
+
+
